@@ -19,7 +19,16 @@ public class Student {
     }
 
     public void print(){
-        System.out.println(name+"\t"+english+"\t"+math);
+        int average = (english+math)/2;
+       // System.out.println(name+english+math+average);
+        System.out.print(name+"\t"+english+"\t"+math+"\t"+setAverage());
+        if (average<60){
+            System.out.print("*");
+        }
+         System.out.println();
+    }
+    public int setAverage(){
+        return (english+math)/2;
     }
 
 }
