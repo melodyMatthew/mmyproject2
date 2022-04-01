@@ -1,4 +1,4 @@
-package com.mel;
+package com.mel.score;
 
 public class Student {
     String name;

@@ -1,6 +1,8 @@
-package com.mel;
+package com.mel.score;
 
-public class GraduatStudent extends Student{
+import com.mel.score.Student;
+
+public class GraduatStudent extends Student {
 int thisis;
     public GraduatStudent(String name,
                       int english,
@@ -9,8 +11,9 @@ int thisis;
     super(name, english, math);
     this.thisis = thisis;
 }
+//overide
 public void print(){
-        // 覆寫(Override):重寫父類別之
-        System.out.println(name+"\t"+english+"\t"+math+"\t"+setAverage());
+
+        System.out.println(name+"\t"+english+"\t"+math+"\t"+setAverage()+"\t"+thisis);
 }
 }

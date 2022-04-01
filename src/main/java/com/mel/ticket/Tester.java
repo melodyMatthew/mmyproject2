@@ -7,25 +7,39 @@ public class Tester {
   //      Ticket ticket01 = new Ticket(Station.TAIPEI_STATION,Station.KAOHSIUNG_STATION);
         Scanner scanner = new Scanner(System.in);
         System.out.println("Your start station?(1: Taipei,2: Taichung,3: Kaohsiung )");
-        Station startStation = null;
+        Station start = null;
         int choice = Integer.parseInt(scanner.next());
         switch (choice) {
             case 1:
-                startStation = Station.TAIPEI_STATION;
+                start = Station.TAIPEI_STATION;
             case 2:
-                startStation = Station.TAICHUNG_STATION;
+                start = Station.TAICHUNG_STATION;
             case 3:
-                startStation = Station.KAOHSIUNG_STATION;
+                start = Station.KAOHSIUNG_STATION;
+                break;
     }
 
-        Station endStation = null;
+        Station end = null;
         System.out.println("Your end station?(1: Taipei,2: Taichung,3: Kaohsiung )");
         switch (choice) {
             case 1:
-                endStation = Station.TAIPEI_STATION;
+                end = Station.TAIPEI_STATION;
             case 2:
-                endStation = Station.TAICHUNG_STATION;
+                end = Station.TAICHUNG_STATION;
             case 3:
-                endStation = Station.KAOHSIUNG_STATION;
+                end = Station.KAOHSIUNG_STATION;
+                break;
         }
+        System.out.println("Which kind if ticket do you want? 1)normal. 2)student. 3)elder.");
+        choice= Integer.parseInt(scanner.next());
+        Ticket ticket  = null;
+        switch (choice){
+            case 1:
+                ticket = new Ticket(start, end);
+                break;
+            case 2:
+                ticket = new StudentTicket(start, end);
+                break;
+        }
+        ticket.print();
 }}

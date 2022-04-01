@@ -1,4 +1,7 @@
-package com.mel;
+package com.mel.score;
+
+import com.mel.score.GraduatStudent;
+import com.mel.score.Student;
 
 public class Scoring {
     public static void main(String[] args) {
@@ -9,5 +12,12 @@ public class Scoring {
         jack.print();
         hank.print();
         jane.print();
+        //String aa="tes";
+         //int bb=20;
+        //int cc=30;
+       // Student mm = new Student(aa,bb,cc);
+       // mm.print();
+
+
     }
 }
